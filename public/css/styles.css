@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: var(--font-family);
+  color: white;
+  font-size: 1.6rem;
+  white-space: pre-line; }
+
+p {
+  margin: 1rem 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0 2rem 0; }
+
+ul {
+  list-style: none; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+img {
+  max-width: 100%; }
+
+/* Landscape phones and down */
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* Large desktop */
+.text-flashy {
+  color: #e84118;
+  font-size: 2rem; }
+
+/* BUTTONS */
+.btn {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 0;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  font-weight: 700; }
+  .btn:hover {
+    transform: scale(1.1); }
+  .btn-red {
+    background: #e13237;
+    color: white; }
+
+.chip {
+  color: white;
+  padding: 0 0.5rem;
+  border-radius: 5px; }
+  .chip-vuejs {
+    background: #3fb27f; }
+  .chip-springboot {
+    background: #66a83c; }
+  .chip-kotlin {
+    background: #e57934; }
+  .chip-docker {
+    background: #0098d5; }
+  .chip-scrapy {
+    background: #2faa3e; }
+  .chip-typescript {
+    background: #2e74c0; }
+  .chip-nodejs {
+    background: #8cbf3d; }
+  .chip-mysql {
+    background: #e08a01; }
+  .chip-mongodb {
+    background: #4baa4f; }
+  .chip-pug {
+    background: #53312a; }
+
+/* FIRST VIEW ON PAGE */
+.grid-container {
+  display: grid;
+  min-height: 100vh;
+  grid: "nav nav" 8rem "picture header" 25rem "aside content" auto "aside content" auto / 35rem auto;
+  /* NAVIGATION */
+  /* HEADER */
+  /* ASIDE */ }
+  .grid-container nav {
+    grid-area: nav;
+    background: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5rem;
+    transition: all 3s; }
+    .grid-container nav .logo {
+      font-size: 4rem;
+      cursor: pointer; }
+      .grid-container nav .logo:hover {
+        transform: scale(1.4); }
+    .grid-container nav ul {
+      display: flex; }
+      .grid-container nav ul li {
+        cursor: pointer;
+        padding: 0 2rem;
+        letter-spacing: 0.5rem;
+        font-size: 2rem;
+        line-height: 8rem;
+        transition: all 0.3s; }
+        .grid-container nav ul li:hover {
+          background: var(--primary); }
+  .grid-container .picture {
+    grid-area: picture;
+    background: var(--light);
+    display: flex;
+    justify-content: center;
+    padding: 2rem; }
+    .grid-container .picture img {
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid white; }
+  .grid-container header {
+    grid-area: header;
+    background: var(--light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .grid-container header h1 {
+      text-align: center;
+      letter-spacing: 2rem;
+      font-size: 5rem; }
+  .grid-container aside {
+    grid-area: aside;
+    background: var(--dark);
+    padding: 5rem; }
+    .grid-container aside h2 {
+      margin: 2rem 0;
+      letter-spacing: 0.4rem; }
+    .grid-container aside i {
+      flex: 0 0 5rem;
+      font-size: 2rem;
+      margin: 0 1rem; }
+    .grid-container aside .social-container {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      border-radius: 3rem;
+      transition: all 0.3s; }
+      .grid-container aside .social-container:hover {
+        background: var(--primary);
+        transform: scale(1.2); }
+      .grid-container aside .social-container i {
+        flex: 0 0 5rem;
+        font-size: 2rem; }
+  .grid-container .welcome {
+    grid-area: content;
+    background: var(--primary);
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .grid-container .welcome .welcome-container {
+      border-radius: 0.2rem;
+      background: var(--light);
+      padding: 3rem; }
+      .grid-container .welcome .welcome-container p:first-child {
+        font-size: 5rem; }
+      .grid-container .welcome .welcome-container p {
+        font-size: 1.7rem;
+        margin-bottom: 3rem; }
+      .grid-container .welcome .welcome-container hr {
+        margin: 2rem 0 2rem 0;
+        width: 30rem; }
+
+.skills-container {
+  background: var(--light);
+  display: flex;
+  justify-content: center; }
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  margin: 5rem;
+  background: var(--dark);
+  border-radius: 5px;
+  width: 80%; }
+  .skills h2 {
+    text-align: center;
+    font-size: 5rem;
+    letter-spacing: 1rem; }
+  .skills .skills-content {
+    display: flex; }
+    .skills .skills-content section {
+      margin: 2rem;
+      width: 50%;
+      background-color: var(--primary);
+      padding: 3rem;
+      border-radius: 5px; }
+      .skills .skills-content section h3 {
+        text-align: center;
+        font-size: 3rem; }
+      .skills .skills-content section h4 {
+        margin: 3rem 0 3rem 0;
+        font-size: 2rem;
+        font-weight: 500; }
+  .skills img {
+    height: 6rem;
+    margin: 0 1rem 0 0;
+    background: white;
+    padding: 1rem;
+    border-radius: 5px; }
+
+.achievements-container {
+  background: var(--primary);
+  display: flex;
+  justify-content: center; }
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  margin: 5rem;
+  background: var(--dark);
+  border-radius: 5px;
+  width: 80%;
+  align-items: center; }
+  .achievements h2 {
+    text-align: center;
+    font-size: 5rem;
+    letter-spacing: 0.5rem; }
+
+.achievements-content {
+  padding: 4rem;
+  border-radius: 1rem;
+  min-width: 90%;
+  max-width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+  .achievements-content .achievement-block {
+    display: grid;
+    grid: "img" 20rem "content" 30rem "github" 4rem / auto;
+    width: 35rem;
+    background: var(--primary);
+    overflow: hidden;
+    border: 2px solid var(--light);
+    border-radius: 5px;
+    margin-bottom: 3rem; }
+    .achievements-content .achievement-block:hover {
+      box-shadow: 0px 0px 8px 0px white; }
+    .achievements-content .achievement-block img {
+      grid-area: img;
+      width: 35rem;
+      height: 20rem; }
+    .achievements-content .achievement-block .achievement-content {
+      grid-area: content;
+      padding: 0 2rem; }
+      .achievements-content .achievement-block .achievement-content h3 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 2.5rem; }
+      .achievements-content .achievement-block .achievement-content .achievement-technologies {
+        display: flex;
+        flex-flow: row wrap; }
+        .achievements-content .achievement-block .achievement-content .achievement-technologies span {
+          margin: 0 0.7rem 0.7rem 0;
+          font-size: 1.7rem; }
+      .achievements-content .achievement-block .achievement-content .date {
+        font-style: italic;
+        font-weight: 300;
+        font-size: 1.7rem; }
+      .achievements-content .achievement-block .achievement-content .achievement-description {
+        font-weight: 400; }
+    .achievements-content .achievement-block .achievement-github {
+      grid-area: github;
+      font-size: 3rem;
+      place-self: center;
+      padding-bottom: 1rem; }
+
+/* ---------------- CONTACT -------------*/
+.contact-container {
+  background: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 6rem; }
+  .contact-container h2 {
+    text-align: center;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    margin-top: 6rem; }
+  .contact-container form {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+    padding: 3rem;
+    width: 50%;
+    background: var(--primary);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px white; }
+    .contact-container form label {
+      margin: 1rem 0; }
+    .contact-container form input {
+      border: 0;
+      outline: none;
+      border-bottom: 1px solid white;
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem;
+      font-size: 1.6rem;
+      width: auto; }
+      .contact-container form input::placeholder {
+        color: white;
+        font-style: italic; }
+    .contact-container form textarea {
+      height: 15rem;
+      border-radius: 5px;
+      padding: 1rem;
+      outline: none; }
+
+/* -------------- FOOTER -------------*/
+footer {
+  height: 5rem;
+  background-color: #e13237;
+  display: flex;
+  justify-content: center;
+  align-items: center; }

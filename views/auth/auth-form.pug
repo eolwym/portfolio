@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  div
+    form(method="post" action="/profil/signin")
+        div Connexion
+        div
+            div
+                label Email 
+                input(type="email" name="email")
+            div
+                label Password 
+                input(type="password" name="password")
+            div
+                input(type="submit" value="Connexion")

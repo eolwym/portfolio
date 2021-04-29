@@ -1,0 +1,30 @@
+extends ../admin-layout.pug
+block css
+    link(rel="stylesheet", href="/css/admin/achievement-form.css")
+block content 
+ 
+    h1 AJOUTER UNE REALISATION
+    .form-container
+        form(action= achievement._id ? "/admin/achievements/update/" + achievement._id : "/admin/achievements/create" method="POST" enctype="multipart/form-data")
+            label(for="title") Titre
+            input(type="text" name="title" id="title" value=achievement.title)
+
+            label(for="technologies") Les technologies utilisées
+            select(id="technologies" name='technologies' multiple=true)
+                for technology in technologies
+                    option(value=technology._id)= technology.title
+
+            label(for="date") Date
+            input(type="text" name="date" id="date" value=achievement.date)
+
+            label(for="description") Description
+            textarea(name="description", cols="30", rows="10")= achievement.description
+
+            label(for="githubLink") Lien Github
+            input(type="text" name="githubLink" id="githubLink" value=achievement.githubLink)
+
+            label(for="url_img") Image
+            input(type="file" name="url_img" value=achievement.url_img)
+
+            input(type="submit", value="Ajouter")
+            // Preview

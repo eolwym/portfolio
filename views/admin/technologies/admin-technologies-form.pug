@@ -1,0 +1,9 @@
+form(action= technology._id ? "/admin/technologies/update/" + technology._id : "/admin/technologies/create" method="POST" enctype="multipart/form-data")
+    label(for="technologyTitle") Titre (en minuscule)
+    input(type="text" name="technologyTitle" id="technologyTitle" value=technology.title)
+
+    label(for="technologyTitle") Image
+    input(type="file" name="url_img" id="technologyImage")
+
+    button(type="submit", class="btn" id="technology-submit-btn")= technology._id ? "Modifier" : "Supprimer"
+    button(type="button" class="btn close") Fermer

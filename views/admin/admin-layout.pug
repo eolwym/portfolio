@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        // Google fonts
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+
+        // Styles
+        link(rel="stylesheet", href="/css/variables.css")
+        link(rel="stylesheet", href="/css/styles.admin.css")
+        block css
+        
+        // Font awesome
+        script(src="https://kit.fontawesome.com/a4c435403d.js" crossorigin="anonymous")
+
+        block js
+
+        title Document
+    body 
+        .admin-container
+            header.admin-header
+                nav 
+                    ul 
+                        a(href="/admin")
+                            li.home <i class="fas fa-house-damage"></i>
+                        a(href="/admin/achievements")
+                            li <i class="fas fa-trophy"></i> Réalisations 
+                        a(href="/admin/technologies")
+                            li <i class="fas fa-tools"></i> Technologies 
+            .admin-content
+                block content
+            
+        

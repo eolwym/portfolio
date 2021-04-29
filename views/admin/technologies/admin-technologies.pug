@@ -1,0 +1,21 @@
+extends ../admin-layout.pug
+block css
+    link(rel="stylesheet", href="/css/admin/technologies.css")
+block js 
+    script(src="/javascripts/admin/technologies/technologies.js") 
+block content 
+    .technologies-container
+        h1 TECHNOLOGIES
+        .technologies-add
+            button(class="btn btn-red") Ajouter une technologie
+        .form-container
+        .technologies-content
+            for technology in technologies
+                .technologies-elem 
+                    img(src=technology.url_img)
+                    span= technology.title.toUpperCase()
+                    .edit-delete 
+                        div(class="edit" id=technology._id) MODIFIER
+                        div(class="delete" id=technology._id) SUPPRIMER
+
+

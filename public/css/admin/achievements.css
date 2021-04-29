@@ -1,0 +1,67 @@
+/* achievements */
+.achievements-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .achievements-container h1 {
+    padding: 4rem; }
+  .achievements-container .achievements-add {
+    width: 90%;
+    float: left;
+    margin: 2rem; }
+  .achievements-container .achievements-content {
+    background: var(--dark);
+    padding: 4rem;
+    border-radius: 1rem;
+    min-width: 90%;
+    max-width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    .achievements-container .achievements-content .achievement-block {
+      display: grid;
+      grid: "img" 20rem "content" 30rem "edit-delete" 4rem / auto;
+      width: 35rem;
+      background: var(--primary);
+      overflow: hidden;
+      border: 2px solid var(--light);
+      border-radius: 5px;
+      margin-bottom: 3rem; }
+      .achievements-container .achievements-content .achievement-block:hover {
+        box-shadow: 0px 0px 8px 0px white; }
+      .achievements-container .achievements-content .achievement-block img {
+        grid-area: img;
+        width: 35rem;
+        height: 20rem; }
+      .achievements-container .achievements-content .achievement-block .achievement-content {
+        grid-area: content;
+        padding: 0 2rem; }
+        .achievements-container .achievements-content .achievement-block .achievement-content h2 {
+          text-align: center;
+          margin-bottom: 0.2rem; }
+        .achievements-container .achievements-content .achievement-block .achievement-content .achievement-technologies {
+          display: flex;
+          flex-flow: row wrap; }
+          .achievements-container .achievements-content .achievement-block .achievement-content .achievement-technologies span {
+            margin: 0 0.7rem 0.7rem 0; }
+        .achievements-container .achievements-content .achievement-block .achievement-content .date {
+          font-style: italic; }
+        .achievements-container .achievements-content .achievement-block .achievement-content .achievement-description {
+          font-size: 1.5rem; }
+      .achievements-container .achievements-content .achievement-block .achievement-edit-delete {
+        grid-area: edit-delete;
+        display: flex;
+        justify-content: space-around;
+        background: var(--light);
+        text-align: center; }
+        .achievements-container .achievements-content .achievement-block .achievement-edit-delete .edit {
+          width: 50%;
+          line-height: 4rem; }
+          .achievements-container .achievements-content .achievement-block .achievement-edit-delete .edit:hover {
+            background-color: #00C180; }
+        .achievements-container .achievements-content .achievement-block .achievement-edit-delete .delete {
+          width: 50%;
+          line-height: 4rem; }
+          .achievements-container .achievements-content .achievement-block .achievement-edit-delete .delete:hover {
+            background-color: #00C180; }

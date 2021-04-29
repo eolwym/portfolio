@@ -1,0 +1,49 @@
+@import 'reset';
+@import 'bases';
+@import 'media-queries';
+@import 'classes';
+@import 'technologies';
+
+/* ADMIN CONTAINER */
+.admin-container {
+    display: grid;
+    min-height: 100vh;
+    grid:
+        "nav content" auto / 160px auto
+    ;
+}
+
+
+
+/* NAVIGATION */
+.admin-header {
+    grid-area: nav;
+    background-color: var(--dark);
+    nav {
+        position: sticky;
+        top: 0;
+        text-align: center;
+        .home {
+            padding: 3rem;
+        }
+        li {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.5s;
+            cursor: pointer;
+            &:hover {
+                background: var(--light);
+            }
+        }
+        i {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+/* admin content */ 
+.admin-content {
+    grid-area: content;
+    background-color: var(--primary);
+}

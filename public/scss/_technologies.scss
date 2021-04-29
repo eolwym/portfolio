@@ -1,0 +1,35 @@
+.chip {
+    color: white;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+    &-vuejs {
+        background: #3fb27f;
+    }
+    &-springboot {
+        background: #66a83c;
+    }
+    &-kotlin {
+        background: #e57934;
+    }
+    &-docker {
+        background: #0098d5;
+    }
+    &-scrapy {
+        background: #2faa3e;
+    }
+    &-typescript {
+        background: #2e74c0;
+    }
+    &-nodejs {
+        background: #8cbf3d;
+    }
+    &-mysql {
+        background: #e08a01;
+    }
+    &-mongodb {
+        background: #4baa4f;
+    }
+    &-pug {
+        background: #53312a;
+    }
+}

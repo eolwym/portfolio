@@ -1,0 +1,141 @@
+extends ../layout.pug 
+
+block content
+    .grid-container
+        nav
+            .logo
+                a(href="#")
+                    i(class="fas fa-house-damage")
+            ul 
+                li 
+                    a(href="#skills") COMPÉTENCES
+                li 
+                    a(href="#achievements") RÉALISATIONS
+                li 
+                    a(href="#contact") CONTACT
+        .picture
+            img(src='images/cedric-marurai.jpeg' class="Cédric Maururai Photo")
+        header
+                h1 CÉDRIC MARURAI
+                h2 Développeur Fullstack Junior
+                span.text-flashy
+                    | Recherche 
+                    strong ALTERNANCE
+                    |  rentrée Septembre / Octobre 2021 ( Licence informatique )
+        aside
+            .block
+                h2 CONTACT
+                h3  Téléphone
+                p <i class="fas fa-phone-alt"></i>06 29 34 93 65
+                h3  Email
+                p <i class="fas fa-envelope"></i> cedric.marurai@gmail.com
+            .block
+                h2 SOCIAL
+                a(href="www.linkedin.com/in/cedric-marurai" target="_blank" class="social-container")
+                    i.fab.fa-linkedin
+                    p Cédric Marurai
+                a(href="https://github.com/eolwym" target="_blank" class="social-container")
+                    i.fab.fa-github
+                    p eolwym
+            .block 
+                h2 CURRICULUM
+                button.btn.btn-red </i> Télécharger le cv
+            
+
+
+        section(class="welcome")
+            .welcome-container 
+                p Bienvenue !
+                span.text-flashy J’aide les entreprises dans l’élaboration et le développement d’application web.
+                hr
+                p Après 2 ans au sein du milieu professionnel, j’ai décidé de me réorienter dans l’univers de l’informatique.
+
+                p J’ai suivi une formation à l’ADRAR FORMATION dans laquelle j’ai pu confirmer que ce domaine était ma passion.
+
+                p J’y est appris les différents langages, concepts et notions du web que j’ai pu mettre en pratique aux travers divers projets.
+
+                p J’ai également effectué un stage au sein d’une entreprise spécialisé dans le e-commerce pour laquelle j’ai développé une solution d’analyse de marché.
+
+    .skills-container#skills
+        section(class="skills")
+            h2 MES COMPETENCES
+            .skills-content
+                section(class="skills-technologies")
+                    h3 Technologies
+                    article 
+                        
+                        h4.text-flashy Technologies préférées
+                        .skills-technologies-img
+                            img(src=technologies.find(technology => technology.title == "docker").url_img, alt="docker")
+                            img(src=technologies.find(technology => technology.title == "vuejs").url_img, alt="vuejs")
+                            img(src=technologies.find(technology => technology.title == "angular").url_img, alt="angular")
+                            img(src=technologies.find(technology => technology.title == "nodejs").url_img, alt="nodejs")
+                            img(src=technologies.find(technology => technology.title == "mysql").url_img, alt="mysql")
+                            img(src=technologies.find(technology => technology.title == "linux").url_img, alt="linux")
+                    article 
+                        h4.text-flashy Les technologies avec lesquelles j'ai apprécié travailler
+                        .skills-technologies-img
+                            img(src=technologies.find(technology => technology.title == "kotlin").url_img, alt="kotlin")
+                            img(src=technologies.find(technology => technology.title == "springboot").url_img, alt="springboot")
+                    article 
+                        h4.text-flashy Les technologies que je souhaite découvrir / approfondir
+                        .skills-technologies-img
+                            img(src=technologies.find(technology => technology.title == "mongodb").url_img, alt="mongodb")
+                            img(src=technologies.find(technology => technology.title == "typescript").url_img, alt="typescript")
+                            img(src=technologies.find(technology => technology.title == "react").url_img, alt="react")
+                            img(src=technologies.find(technology => technology.title == "graphql").url_img, alt="graphql")
+
+
+                section(class="skills-area")
+                    h3 Savoir faire
+                    article 
+                        h4.text-flashy Concevoir et développer une interface utilisateur
+                        p Maquetter une application 
+                        p Développer le front-end d'une interface utilisateur 
+                        p Développer le back-end d'une interface utilisateur 
+                    article 
+                        h4.text-flashy Concevoir et développer la persistance des données
+                        p Concevoir une base de données (MCD, MLD)
+                        p Mettre en place une base de données (SQL)
+                    article 
+                        h4.text-flashy Concevoir et développer une application multicouche
+                        p 
+                            | Collaborer à la gestion d’un projet informatique et à
+                            | l’organisation de l’environnement de développement
+                        p Développer des composants métier
+                        p Construire une application organisée en couches (MVC)
+                        p Préparer et éxécuter le déploiement d'une application
+
+
+    .achievements-container#achievements
+        section(class="achievements")
+            h2 MES REALISATIONS
+            .achievements-content
+                for achievement in achievements
+                    .achievement-block
+                        img(src=achievement.url_img, alt=achievement.title)
+                        .achievement-content
+                            h3= achievement.title 
+                            .achievement-technologies 
+                                for technology in achievement.technologies
+                                    span(class=`chip chip-${technology.title}`)= technology.title
+                            p(class="date")= achievement.date
+                            .achievement-description= achievement.description
+                        if achievement.githubLink
+                            a(href=achievement.githubLink target="_blank" class="achievement-github")
+                                i(class="fab fa-github")
+                                    
+
+
+
+    .contact-container#contact
+        h2 CONTACTEZ - MOI
+        form(action="")
+            input(type="text" name="name" id="name" placeholder="Nom Prénom")  
+            input(type="email" name="email" id="email" placeholder="Email")  
+            label(for="message") Message
+            textarea(type="text" name="message" id="message") 
+            button(type="submit") Envoyer
+
+    footer 
+        p Copyright © 2021 Cédric Marurai

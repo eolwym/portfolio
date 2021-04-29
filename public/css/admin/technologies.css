@@ -1,0 +1,78 @@
+/* technologies */
+.technologies-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .technologies-container h1 {
+    padding: 4rem; }
+  .technologies-container .technologies-add {
+    width: 90%;
+    float: left;
+    margin: 2rem; }
+  .technologies-container .form-container {
+    width: 90%; }
+  .technologies-container form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem; }
+    .technologies-container form label {
+      font-size: 2rem;
+      font-weight: 700; }
+    .technologies-container form input {
+      width: 25rem;
+      margin: 1rem 0;
+      line-height: 2.5rem;
+      font-size: 1.8rem; }
+    .technologies-container form button {
+      margin-top: 1rem;
+      width: 25rem; }
+  .technologies-container .technologies-content {
+    background: var(--dark);
+    padding: 4rem;
+    border-radius: 1rem;
+    min-width: 90%;
+    max-width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+  .technologies-container .technologies-elem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light);
+    min-width: 24rem;
+    max-width: 24rem;
+    height: 17rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    text-align: center; }
+    .technologies-container .technologies-elem img {
+      height: 10rem;
+      font-size: 3rem;
+      padding: 2rem; }
+    .technologies-container .technologies-elem span {
+      height: 20%;
+      font-size: 1.8rem;
+      font-weight: 700; }
+    .technologies-container .technologies-elem .edit-delete {
+      display: none; }
+    .technologies-container .technologies-elem:hover {
+      box-shadow: 0px 0px 8px 0px white; }
+      .technologies-container .technologies-elem:hover .edit-delete {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background: var(--dark);
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 1rem; }
+        .technologies-container .technologies-elem:hover .edit-delete .edit {
+          border-bottom-left-radius: 1rem; }
+        .technologies-container .technologies-elem:hover .edit-delete .delete {
+          border-bottom-right-radius: 1rem; }
+        .technologies-container .technologies-elem:hover .edit-delete div {
+          width: 50%;
+          line-height: 4rem;
+          font-weight: 700; }
+          .technologies-container .technologies-elem:hover .edit-delete div:hover {
+            background-color: #00C180; }

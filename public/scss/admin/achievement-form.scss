@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background: var(--dark);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem;
+    padding: 5rem;
+    width: 70%;
+    label {
+        letter-spacing: 0.1rem;
+        margin: 1rem 0;
+    }
+
+    input {
+        border: none;
+        border-radius: 3px;
+        line-height: 2.5rem;
+        padding: 0.3rem;
+    }
+
+    textarea {
+        padding: 1rem;
+    }
+
+}
+

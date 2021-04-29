@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: var(--font-family);
+  color: white;
+  font-size: 1.6rem;
+  white-space: pre-line; }
+
+p {
+  margin: 1rem 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0 2rem 0; }
+
+ul {
+  list-style: none; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+img {
+  max-width: 100%; }
+
+/* Landscape phones and down */
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* Large desktop */
+.text-flashy {
+  color: #e84118;
+  font-size: 2rem; }
+
+/* BUTTONS */
+.btn {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 0;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  font-weight: 700; }
+  .btn:hover {
+    transform: scale(1.1); }
+  .btn-red {
+    background: #e13237;
+    color: white; }
+
+.chip {
+  color: white;
+  padding: 0 0.5rem;
+  border-radius: 5px; }
+  .chip-vuejs {
+    background: #3fb27f; }
+  .chip-springboot {
+    background: #66a83c; }
+  .chip-kotlin {
+    background: #e57934; }
+  .chip-docker {
+    background: #0098d5; }
+  .chip-scrapy {
+    background: #2faa3e; }
+  .chip-typescript {
+    background: #2e74c0; }
+  .chip-nodejs {
+    background: #8cbf3d; }
+  .chip-mysql {
+    background: #e08a01; }
+  .chip-mongodb {
+    background: #4baa4f; }
+  .chip-pug {
+    background: #53312a; }
+
+/* ADMIN CONTAINER */
+.admin-container {
+  display: grid;
+  min-height: 100vh;
+  grid: "nav content" auto / 160px auto; }
+
+/* NAVIGATION */
+.admin-header {
+  grid-area: nav;
+  background-color: var(--dark); }
+  .admin-header nav {
+    position: sticky;
+    top: 0;
+    text-align: center; }
+    .admin-header nav .home {
+      padding: 3rem; }
+    .admin-header nav li {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.5s;
+      cursor: pointer; }
+      .admin-header nav li:hover {
+        background: var(--light); }
+    .admin-header nav i {
+      font-size: 4rem;
+      margin-bottom: 1.5rem; }
+
+/* admin content */
+.admin-content {
+  grid-area: content;
+  background-color: var(--primary); }

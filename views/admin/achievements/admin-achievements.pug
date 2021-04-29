@@ -1,0 +1,26 @@
+extends ../admin-layout.pug
+block css
+    link(rel="stylesheet", href="/css/admin/achievements.css")
+block js 
+    script(src="/javascripts/admin/achievements/achievements.js") 
+block content 
+    .achievements-container
+        h1 REALISATIONS
+        .achievements-add
+            a(href="/admin/achievements/form" class="btn btn-red") Ajouter une réalisation
+        .achievements-content
+            for achievement in achievements
+                .achievement-block
+                    img(src=achievement.url_img, alt="", srcset="")
+                    .achievement-content
+                        h2= achievement.title 
+                        .achievement-technologies 
+                            for technology in achievement.technologies
+                                span(class=`chip chip-${technology.title}`)= technology.title
+                        p(class="date")= achievement.date
+                        .achievement-description= achievement.description
+                    .achievement-edit-delete
+                        a(href="/admin/achievements/form/update/" + achievement._id class="edit") MODIFIER
+                        a(class="delete" id=achievement._id) SUPPRIMER
+
+

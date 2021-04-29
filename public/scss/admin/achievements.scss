@@ -1,0 +1,104 @@
+/* achievements */
+.achievements-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        padding: 4rem;
+    }
+
+    .achievements-add {
+        width: 90%;
+        float: left;
+        margin: 2rem;
+    }
+
+    .achievements-content {
+        background: var(--dark);
+        padding: 4rem;
+        border-radius: 1rem;
+        min-width: 90%;
+        max-width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+
+        .achievement-block {
+            display: grid;
+            grid: 
+            "img" 20rem
+            "content" 30rem
+            "edit-delete" 4rem
+            / auto;
+            width: 35rem;
+            background: var(--primary);
+            overflow: hidden;
+            border: 2px solid var(--light);
+            border-radius: 5px;
+            margin-bottom: 3rem;
+
+            &:hover {
+                box-shadow: 0px 0px 8px 0px white;
+            }
+
+            img {
+                grid-area: img;
+                width: 35rem;
+                height: 20rem;
+            }
+            .achievement-content {
+                grid-area: content;
+                padding: 0 2rem;
+                
+                h2 {
+                    text-align: center;
+                    margin-bottom: 0.2rem;
+                }
+
+                .achievement-technologies {
+                    display: flex;
+                    flex-flow: row wrap;
+                    span {
+                        margin: 0 0.7rem 0.7rem 0;
+                    }
+                }
+                .date {
+                    font-style: italic;
+                }
+                .achievement-description {
+                    font-size: 1.5rem;
+                }
+
+            }
+            .achievement-edit-delete {
+                grid-area: edit-delete;
+                display: flex;
+                justify-content: space-around;
+                background: var(--light);
+                text-align: center;
+                .edit {
+                    width: 50%;
+                    line-height: 4rem;
+                    &:hover {
+                        background-color: #00C180;
+                    }
+                }
+
+                .delete {
+                    width: 50%;
+                    line-height: 4rem;
+                    &:hover {
+                        background-color: #00C180;
+                    }
+                }
+            }
+
+        }
+
+
+
+
+    }
+}
