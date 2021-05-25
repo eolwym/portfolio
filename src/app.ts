@@ -1,9 +1,8 @@
 import express, { Application, Request, Response } from 'express'
-import errorHandler from 'errorhandler';
-import path from 'path'
 import morgan from 'morgan'
-
+import path from 'path'
 import mainRouter from './routes/index'
+import errorHandler from 'errorhandler';
 
 export const app: Application = express();
 

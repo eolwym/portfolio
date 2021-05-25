@@ -1,6 +1,6 @@
 .text {
     &-flashy {
-        color: #e84118;
+        color: #ffb037;
         font-size: 2rem;
     }
 }
@@ -17,11 +17,11 @@
     text-transform: uppercase;
     font-weight: 700;
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
-    &-red {
-        background: #e13237;
+    &-flashy {
+        background: #ffb037;
         color: white
     }
 }

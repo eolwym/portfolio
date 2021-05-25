@@ -10,7 +10,8 @@ body {
   font-family: var(--font-family);
   color: white;
   font-size: 1.6rem;
-  white-space: pre-line; }
+  white-space: pre-line;
+  width: fit-content; }
 
 p {
   margin: 1rem 0; }
@@ -29,11 +30,10 @@ img {
   max-width: 100%; }
 
 /* Landscape phones and down */
-/* Landscape phone to portrait tablet */
 /* Portrait tablet to landscape and desktop */
 /* Large desktop */
 .text-flashy {
-  color: #e84118;
+  color: #ffb037;
   font-size: 2rem; }
 
 /* BUTTONS */
@@ -47,9 +47,9 @@ img {
   text-transform: uppercase;
   font-weight: 700; }
   .btn:hover {
-    transform: scale(1.1); }
-  .btn-red {
-    background: #e13237;
+    transform: scale(1.05); }
+  .btn-flashy {
+    background: #ffb037;
     color: white; }
 
 .chip {
@@ -76,6 +76,17 @@ img {
     background: #4baa4f; }
   .chip-pug {
     background: #53312a; }
+  .chip-react {
+    background: #5dd3f3; }
+  .chip-graphql {
+    background: #de33a6; }
+  .chip-angular {
+    background: #db2f35; }
+  .chip-linux {
+    background: black; }
+
+body {
+  width: 100%; }
 
 /* ADMIN CONTAINER */
 .admin-container {

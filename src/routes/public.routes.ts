@@ -4,13 +4,7 @@ const { getPortfolio } = require('../controllers/public.controller/public.contro
 
 const router = Router()
 
-
 router.get('/', getPortfolio);
-
-router.get('/cv', (req: Request, res: Response) => {
-    // Télécharger cv au format pdf
-    res.end()
-})
 
 /* Authentification */
 

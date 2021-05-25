@@ -17,6 +17,8 @@ form {
   form label {
     letter-spacing: 0.1rem;
     margin: 1rem 0; }
+  form select {
+    height: 15rem; }
   form input {
     border: none;
     border-radius: 3px;
