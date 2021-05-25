@@ -4,51 +4,87 @@
 @import 'classes';
 @import 'technologies';
 
-/* FIRST VIEW ON PAGE */
+/* NAVIGATION */
+@include xs {
+    nav {
+        border-top: 1px solid var(--light);
+    }
+    .navbar-close {
+        .navbar-elem {
+            display: none;
+        }
+    }
+    .navbar-open {
+        .navbar-elem {
+            display: block;
+        }
+    }
+}
+
+nav {
+    background: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #menu-burger {
+        display: none;
+        @include xs {
+            display: block;
+        }
+    }
+    @include xs {
+        position: fixed;
+        bottom: 0;
+        background: var(--light);
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        a {
+            display:block;
+        }
+    }
+    ul {
+        display: flex;
+        @include xs {
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+        }
+        li {
+            @include xs {
+                line-height: 6rem;
+                font-size: 1.6rem;
+                padding: 0;
+            }
+            cursor: pointer;
+            padding: 0 2rem;
+            letter-spacing: 0.5rem;
+            font-size: 2rem;
+            line-height: 8rem;
+            transition: all 0.3s;
+            &:hover {
+                background: var(--primary);
+            }
+        }
+    }
+}
+
+/* GRID CONTAINER */
 .grid-container {
     display: grid;
     min-height: 100vh;
     grid:
-        "nav nav" 8rem
         "picture header" 25rem
         "aside content" auto
         "aside content" auto
-        / 35rem auto;
-
-    /* NAVIGATION */
-    nav {
-        grid-area: nav;
-        background: var(--dark);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 3rem 5rem;
-        transition: all 3s;
-
-        .logo {
-            font-size: 4rem;
-            cursor: pointer;
-            &:hover {
-                transform: scale(1.4);
-            }
-        }
-
-        ul {
-            display: flex;
-            li {
-                cursor: pointer;
-                padding: 0 2rem;
-                letter-spacing: 0.5rem;
-                font-size: 2rem;
-                line-height: 8rem;
-                transition: all 0.3s;
-                &:hover {
-                    background: var(--primary);
-                }
-            }
-            
-        }
-
+        / 35rem auto
+    ;
+    @include xs {
+        grid:
+            "picture header" 15rem
+            "content content" auto
+            "aside aside" auto
+            / auto;
     }
 
     .picture {
@@ -57,34 +93,62 @@
         display: flex;
         justify-content: center;
         padding: 2rem;
+        @include xs {
+            min-width: 15rem;
+            height: 15rem;
+        }
         img {
             height: 100%;
             border-radius: 50%;
             border: 2px solid white;
+
         }
     }
     
     /* HEADER */
     header {
+        animation-duration: 2s;
+        animation-name: slideinFromLeft;
         grid-area: header;
         background: var(--light);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
+        padding: 1rem;
+        @include xs {
+
+            h2 {
+                font-size: 1.7rem;
+            }
+            span {
+                display: none;
+            }
+        }
         h1{
-            text-align: center;
             letter-spacing: 2rem;
-            font-size: 5rem;
+            font-size: 4rem;
+            @include xs {
+                font-size: 2rem;
+                letter-spacing: 1rem;
+            }
         }
     }
 
     /* ASIDE */
     aside {
         grid-area: aside;
+        display: flex;
+        justify-content: center;
         background: var(--dark);
         padding: 5rem;
 
+        .block {
+            animation-duration: 2s;
+            animation-name: slideinFromRight;
+            margin-bottom: 3rem;
+        }
         h2 {
             margin: 2rem 0;
             letter-spacing: 0.4rem;
@@ -102,6 +166,7 @@
             align-items: center;
             border-radius: 3rem;
             transition: all 0.3s;
+
             &:hover {
                 background: var(--primary);
                 transform: scale(1.2);
@@ -120,10 +185,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include xs {
+            padding:3rem;
+        }
         .welcome-container {
             border-radius: 0.2rem;
             background: var(--light);
             padding: 3rem;
+            @include xs {
+
+                background: var(--dark);
+                .text-flashy {
+                    font-size: 1.9rem;
+                }
+            }
             p:first-child {
                 font-size: 5rem;
             }
@@ -134,7 +209,6 @@
 
             hr {
                 margin: 2rem 0 2rem 0;
-                width: 30rem;
             }
         }
 
@@ -142,11 +216,23 @@
 
 }
 
+.tooltip {
+    padding: 1rem;
+    font-weight: 700;
+    display: none;
+}
+
 // --------------- SKILLS ---------------//
 .skills-container {
+
     background: var(--light);
     display: flex;
     justify-content: center;
+    @include xs {
+        text-align: center;
+        background: var(--primary);
+    }
+
 }
 
 .skills {
@@ -156,31 +242,54 @@
     margin: 5rem;
     background: var(--dark);
     border-radius: 5px;
-    width: 80%;
+    width: 100%;
+    @include xs {
+        margin: 1rem;
+        padding: 0;
+        width: 100%;
+        background: var(--primary);
+    }
+
     h2 {
         text-align: center;
         font-size: 5rem;
         letter-spacing: 1rem;
+        @include xs {
+            font-size: 2.5rem;
+        }
     }
-
 
     .skills-content {
         display: flex;
-
+        @include xs {
+            flex-direction: column;
+        }
         section {
             margin: 2rem;
             width: 50%;
             background-color: var(--primary);
             padding: 3rem;
             border-radius: 5px;
+            @include xs {
+                width: 100%;
+                margin: 0;
+                margin-bottom: 1.5rem;
+                background: var(--dark);
+            }
             h3 {
                 text-align: center;
                 font-size: 3rem;
+                @include xs {
+                    font-size: 2rem;
+                }
             }
             h4 {
                 margin: 3rem 0 3rem 0;
                 font-size: 2rem;
                 font-weight: 500;
+                @include xs {
+                    font-size: 1.8rem;
+                }
             }
         }
     }
@@ -191,6 +300,9 @@
         background: white;
         padding: 1rem;
         border-radius: 5px;
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 
 }
@@ -199,6 +311,10 @@
     background: var(--primary);
     display: flex;
     justify-content: center;
+    @include xs {
+        width: 100%;
+        background: var(--dark);
+    }
 }
 
 .achievements {
@@ -210,35 +326,42 @@
     border-radius: 5px;
     width: 80%;
     align-items: center;
+    @include xs {
+        margin: 1rem;
+        padding: 0rem;
+        width: 100%;
+    }
     h2 {
         text-align: center;
         font-size: 5rem;
         letter-spacing: 0.5rem;
+        @include xs {
+           font-size: 2rem;
+        }
     }
 }
 
 .achievements-content {
-    padding: 4rem;
     border-radius: 1rem;
-    min-width: 90%;
-    max-width: 90%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-
+    @include xs {
+        padding: 0;
+    }
     .achievement-block {
         display: grid;
         grid: 
         "img" 20rem
         "content" 30rem
         "github" 4rem
-        / auto;
-        width: 35rem;
+        / 28rem;
+
         background: var(--primary);
-        overflow: hidden;
+
         border: 2px solid var(--light);
         border-radius: 5px;
-        margin-bottom: 3rem;
+        margin: 3rem;
 
         &:hover {
             box-shadow: 0px 0px 8px 0px white;
@@ -252,7 +375,7 @@
         .achievement-content {
             grid-area: content;
             padding: 0 2rem;
-            
+            overflow: hidden;
             h3 {
                 text-align: center;
                 margin-bottom: 1rem;
@@ -280,7 +403,9 @@
             grid-area: github;
             font-size: 3rem;
             place-self: center;
-            padding-bottom:1rem;
+            @include xs {
+                font-size: 2.5rem;
+            }
         }
     }
 }
@@ -292,11 +417,19 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 6rem;
+    @include xs {
+        background: var(--primary);
+        padding-bottom: 1rem;
+    }
     h2 {
         text-align: center;
         font-size: 5rem;
         letter-spacing: 0.5rem;
         margin-top: 6rem;
+        @include xs {
+            margin-top: 3rem;
+            font-size: 2rem;
+        }
     }
     form {
         display: flex;
@@ -307,23 +440,23 @@
         background: var(--primary);
         border-radius: 5px;
         box-shadow: 0px 0px 10px 0px white;
-
+        @include xs {
+            margin: 1rem;
+            padding: 2rem;
+            width: 100%;
+            box-shadow: none;
+            background: none;
+        }
         label {
             margin: 1rem 0;
         }
         input {
             border: 0;
             outline: none;
-            border-bottom: 1px solid white;
-            background: var(--primary);
-            color: white;
             padding: 0.5rem;
             font-size: 1.6rem;
-            width: auto;
-            &::placeholder {
-                color: white;
-                font-style: italic;
-            }
+            margin-bottom: 1rem;
+            border-radius: 5px;
         }
 
         textarea {
@@ -332,13 +465,21 @@
             padding: 1rem;
             outline: none;
         }
+
+        button {
+            margin-top: 2rem;
+        }
+
+        span {
+            text-align: center;
+        }
     }
 
 }
 /* -------------- FOOTER -------------*/
 footer {
     height: 5rem;
-    background-color: #e13237;
+    background-color: var(--primary);
     display: flex;
     justify-content: center;align-items: center;
 }

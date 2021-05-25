@@ -1,92 +1,95 @@
 extends ../layout.pug 
+block css 
+    link(rel='stylesheet' media='only screen and (min-width:1200px)' href='saljs/sal.css' type='text/css')
+
+block js
+    script(src="saljs/sal.js")
+    script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js')
+    script(src="javascripts/profil.js")
 
 block content
+    nav(class="navbar-close")
+        ul 
+            li.navbar-elem 
+                a(href="#skills") COMPÉTENCES
+            li.navbar-elem
+                a(href="#achievements") RÉALISATIONS
+            li.navbar-elem
+                a(href="#contact") CONTACT
+            li#menu-burger 
+                a <i class="fas fa-bars"></i>
     .grid-container
-        nav
-            .logo
-                a(href="#")
-                    i(class="fas fa-house-damage")
-            ul 
-                li 
-                    a(href="#skills") COMPÉTENCES
-                li 
-                    a(href="#achievements") RÉALISATIONS
-                li 
-                    a(href="#contact") CONTACT
         .picture
-            img(src='images/cedric-marurai.jpeg' class="Cédric Maururai Photo")
+            img(src='images/cedric-marurai.jpeg' class="Cédric Maururai Photo" data-sal="slide-right" data-sal-duration="800")
+
         header
-                h1 CÉDRIC MARURAI
-                h2 Développeur Fullstack Junior
-                span.text-flashy
-                    | Recherche 
-                    strong ALTERNANCE
-                    |  rentrée Septembre / Octobre 2021 ( Licence informatique )
+            h1(data-sal="slide-left" data-sal-duration="1000") CÉDRIC MARURAI
+            h2(data-sal="slide-left" data-sal-duration="1000") Développeur Fullstack Junior
+            span.text-flashy(data-sal="slide-left" data-sal-duration="1000")
+                | Recherche 
+                strong ALTERNANCE
+                |  rentrée Septembre / Octobre 2021 ( Licence informatique )
         aside
-            .block
-                h2 CONTACT
-                h3  Téléphone
-                p <i class="fas fa-phone-alt"></i>06 29 34 93 65
-                h3  Email
-                p <i class="fas fa-envelope"></i> cedric.marurai@gmail.com
-            .block
-                h2 SOCIAL
-                a(href="www.linkedin.com/in/cedric-marurai" target="_blank" class="social-container")
-                    i.fab.fa-linkedin
-                    p Cédric Marurai
-                a(href="https://github.com/eolwym" target="_blank" class="social-container")
-                    i.fab.fa-github
-                    p eolwym
-            .block 
-                h2 CURRICULUM
-                button.btn.btn-red </i> Télécharger le cv
-            
+            .personal-information
+                .block(data-sal="slide-right" data-sal-duration="1000" data-sal-delay="500")
+                    h2 CONTACT
+                    p <i class="fas fa-envelope"></i> cedric.marurai@gmail.com
+                    p <i class="fas fa-phone-alt"></i>06 29 34 93 65
+
+                .block(data-sal="slide-right" data-sal-duration="1000" data-sal-delay="500")
+                    h2 SOCIAL
+                    a(href="www.linkedin.com/in/cedric-marurai" target="_blank" class="social-container")
+                        i.fab.fa-linkedin
+                        p Cédric Marurai
+                    a(href="https://github.com/eolwym" target="_blank" class="social-container")
+                        i.fab.fa-github
+                        p eolwym
+                .block(data-sal="slide-right" data-sal-duration="1000" data-sal-delay="500")
+                    h2 CURRICULUM
+                    a(class="btn btn-flashy" href="/cv/cedric_marurai_cv.pdf" target="_blank") </i> Télécharger le cv
+                
 
 
         section(class="welcome")
-            .welcome-container 
+            .welcome-container(data-sal="slide-left" data-sal-duration="1000" data-sal-delay="500")
                 p Bienvenue !
-                span.text-flashy J’aide les entreprises dans l’élaboration et le développement d’application web.
+                p.text-flashy  Je suis Développeur Fullstack spécialisé NodeJS et VueJS.
                 hr
-                p Après 2 ans au sein du milieu professionnel, j’ai décidé de me réorienter dans l’univers de l’informatique.
+                p Passionné par la programmation Web et les nouvelles technologies je suis actuellement à la recherche d'une entreprise pour préparer une Licence informatique en alternance à Toulouse au sein du CNAM.
+                p Suite à cette Licence j'ai pour ambition de poursuivre vers un diplôme d'ingénieur.
+                p J'ai terminé une formation en développement web en Avril 2021 et je suis donc spécialisé dans les technologies du web.
+                p Cependant je suis également intéréssé par d'autre domaine de l'informatique tel que l'IOT, la VR, l'IA et la blockchain.
 
-                p J’ai suivi une formation à l’ADRAR FORMATION dans laquelle j’ai pu confirmer que ce domaine était ma passion.
-
-                p J’y est appris les différents langages, concepts et notions du web que j’ai pu mettre en pratique aux travers divers projets.
-
-                p J’ai également effectué un stage au sein d’une entreprise spécialisé dans le e-commerce pour laquelle j’ai développé une solution d’analyse de marché.
+    .tooltip
 
     .skills-container#skills
         section(class="skills")
+
             h2 MES COMPETENCES
             .skills-content
-                section(class="skills-technologies")
+                section(class="skills-technologies" data-sal="slide-right" data-sal-duration="1000")
                     h3 Technologies
                     article 
-                        
                         h4.text-flashy Technologies préférées
-                        .skills-technologies-img
-                            img(src=technologies.find(technology => technology.title == "docker").url_img, alt="docker")
-                            img(src=technologies.find(technology => technology.title == "vuejs").url_img, alt="vuejs")
-                            img(src=technologies.find(technology => technology.title == "angular").url_img, alt="angular")
-                            img(src=technologies.find(technology => technology.title == "nodejs").url_img, alt="nodejs")
-                            img(src=technologies.find(technology => technology.title == "mysql").url_img, alt="mysql")
-                            img(src=technologies.find(technology => technology.title == "linux").url_img, alt="linux")
+                        img(src=technologies.find(technology => technology.title == "docker").url_img, alt="docker" class="skill-img")
+                        img(src=technologies.find(technology => technology.title == "vuejs").url_img, alt="vuejs" class="skill-img")
+                        img(src=technologies.find(technology => technology.title == "angular").url_img, alt="angular" class="skill-img")
+                        img(src=technologies.find(technology => technology.title == "nodejs").url_img, alt="nodejs" class="skill-img")
+                        img(src=technologies.find(technology => technology.title == "mysql").url_img, alt="mysql" class="skill-img")
+                        img(src=technologies.find(technology => technology.title == "linux").url_img, alt="linux" class="skill-img")
                     article 
                         h4.text-flashy Les technologies avec lesquelles j'ai apprécié travailler
-                        .skills-technologies-img
-                            img(src=technologies.find(technology => technology.title == "kotlin").url_img, alt="kotlin")
-                            img(src=technologies.find(technology => technology.title == "springboot").url_img, alt="springboot")
+                        img(src=technologies.find(technology => technology.title == "kotlin").url_img, alt="kotlin" class="skill-img")
+                        img(src=technologies.find(technology => technology.title == "springboot").url_img, alt="springboot" class="skill-img")
                     article 
                         h4.text-flashy Les technologies que je souhaite découvrir / approfondir
-                        .skills-technologies-img
-                            img(src=technologies.find(technology => technology.title == "mongodb").url_img, alt="mongodb")
-                            img(src=technologies.find(technology => technology.title == "typescript").url_img, alt="typescript")
-                            img(src=technologies.find(technology => technology.title == "react").url_img, alt="react")
-                            img(src=technologies.find(technology => technology.title == "graphql").url_img, alt="graphql")
+                        img(src=technologies.find(technology => technology.title == "mongodb").url_img, alt="mongodb" class="skill-img")
+                        img(src=technologies.find(technology => technology.title == "typescript").url_img, alt="typescript" class="skill-img")
+                        img(src=technologies.find(technology => technology.title == "react").url_img, alt="react" class="skill-img")
+                        img(src=technologies.find(technology => technology.title == "graphql").url_img, alt="graphql" class="skill-img")
 
 
-                section(class="skills-area")
+                section(class="skills-area" data-sal="slide-left" data-sal-duration="1000")
                     h3 Savoir faire
                     article 
                         h4.text-flashy Concevoir et développer une interface utilisateur
@@ -99,9 +102,7 @@ block content
                         p Mettre en place une base de données (SQL)
                     article 
                         h4.text-flashy Concevoir et développer une application multicouche
-                        p 
-                            | Collaborer à la gestion d’un projet informatique et à
-                            | l’organisation de l’environnement de développement
+                        p Collaborer à la gestion d’un projet informatique et à l’organisation de l’environnement de développement
                         p Développer des composants métier
                         p Construire une application organisée en couches (MVC)
                         p Préparer et éxécuter le déploiement d'une application
@@ -112,7 +113,7 @@ block content
             h2 MES REALISATIONS
             .achievements-content
                 for achievement in achievements
-                    .achievement-block
+                    .achievement-block(data-sal="flip-up" data-sal-duration="1000")
                         img(src=achievement.url_img, alt=achievement.title)
                         .achievement-content
                             h3= achievement.title 
@@ -128,14 +129,22 @@ block content
 
 
 
-    .contact-container#contact
+    .contact-container
         h2 CONTACTEZ - MOI
-        form(action="")
-            input(type="text" name="name" id="name" placeholder="Nom Prénom")  
-            input(type="email" name="email" id="email" placeholder="Email")  
-            label(for="message") Message
-            textarea(type="text" name="message" id="message") 
-            button(type="submit") Envoyer
+        form#contact-form(data-sal="flip-right" data-sal-duration="1000")
+            input(type='hidden' name='contact_number')
+            label Nom Prénom
+            input(type='text' name='user_name')
+            label Email
+            input(type='email' name='user_email')
+            label Message
+            textarea(name='message')
+            div(class="g-recaptcha" data-sitekey="6Ld4VOsaAAAAAAsMU7yiHv2WVOmHHZMfZI-zgpos")
+            br
+
+            input(type='submit' value='Envoyer' class='btn btn-flashy')
+            span.contact-form-result
 
     footer 
         p Copyright © 2021 Cédric Marurai
+    script sal()

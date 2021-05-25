@@ -4,6 +4,10 @@
 @import 'classes';
 @import 'technologies';
 
+body {
+    width: 100%;
+}
+
 /* ADMIN CONTAINER */
 .admin-container {
     display: grid;
