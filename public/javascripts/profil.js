@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     imgs.forEach(img => {
         img.addEventListener('mousemove', (e) => {
-            console.log(e);
             tooltip.style.display = 'block'
 
             tooltip.style.position = 'absolute'
@@ -18,7 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
             tooltip.style.zIndex = 1
         })
         img.addEventListener('mouseout', (e) => {
-            console.log(e);
             tooltip.style.display = 'none'
             tooltip.classList.remove('chip')
             tooltip.classList.remove('chip-'+e.target.alt)

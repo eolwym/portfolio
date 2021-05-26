@@ -447,6 +447,8 @@ nav {
       margin-top: 2rem; }
     .contact-container form span {
       text-align: center; }
+    .contact-container form .g-recaptcha {
+      margin: 0 auto; }
 
 /* -------------- FOOTER -------------*/
 footer {
