@@ -2,7 +2,8 @@ module.exports = {
   apps : [{
     script: './build/bin/www.js',
     instances: 'max',
-    watch: true,
+    watch: false,
+    autorestart: false,
     env: {
       NODE_ENV: 'development'
     },

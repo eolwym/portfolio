@@ -354,7 +354,7 @@ nav {
       padding: 0; } }
   .achievements-content .achievement-block {
     display: grid;
-    grid: "img" 20rem "content" 30rem "github" 4rem / 28rem;
+    grid: "img" 20rem "content" 30rem "github" 4rem / 34rem;
     background: var(--primary);
     border: 2px solid var(--light);
     border-radius: 5px;
