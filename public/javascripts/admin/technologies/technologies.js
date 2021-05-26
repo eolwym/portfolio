@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const image = document.querySelector('#technologyImage')
 
     addTechnologyBtn.addEventListener('click', async () => {
-        fetch(`http://${window.location.hostname}/admin/technologies/form`)
+        fetch(`/admin/technologies/form`)
         .then(res => {return res.text()})
         .then(body => {
             form.innerHTML = body
@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e)=> {
             console.log("hihi");
             const id = e.target.id
-            fetch(`http://${window.location.hostname}/admin/technologies/form/update/` + id)
+            fetch(`/admin/technologies/form/update/` + id)
             .then(res => {return res.text()})
             .then(body => {
                 form.innerHTML = body
@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (confirm == true) {
                 const elem = e
                 const id = e.target.id
-                fetch(`http://${window.location.hostname}/admin/technologies/delete/` + id, {
+                fetch(`/admin/technologies/delete/` + id, {
                     method:"POST"
                 })
                 .then(res => {
