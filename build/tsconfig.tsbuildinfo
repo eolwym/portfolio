@@ -617,7 +617,7 @@
         "affectsGlobalScope": false
       },
       "../src/env/production.ts": {
-        "version": "331f106d67641e1c39220d955156b016251bc2324ba6c48740e5faac69ff3ed7",
+        "version": "aa7129603d42f87388fb904cf020b83e9d556eb58aedb92edd308492a8f867eb",
         "signature": "b61a28a6c75ba3ef448ced6294e741764b0e4a4a917862ed475c6835b5c19577",
         "affectsGlobalScope": false
       },
@@ -702,7 +702,7 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/public.controller/public.controller.ts": {
-        "version": "a1cb119e47af49be3c5efe18b402d91f5113bfee33778ee5483655e273f3674f",
+        "version": "10a2aa6051296423e036e0644c5833b592fdb5c8379acd755daca39f8bd7b0f2",
         "signature": "8dc98e62b898fe3e7d42d8456b2f369d196925618ceb218274cf2001218be5a0",
         "affectsGlobalScope": false
       },
@@ -1469,8 +1469,6 @@
       "../src/controllers/public.controller/public.controller.ts": [
         "../node_modules/@types/express/index.d.ts",
         "../node_modules/@types/mongoose/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/path.d.ts",
         "../node_modules/mongoose/index.d.ts",
         "../src/queries/public/public.queries.ts"
       ],
