@@ -5,5 +5,5 @@ form(action= technology._id ? "/admin/technologies/update/" + technology._id : "
     label(for="technologyTitle") Image
     input(type="file" name="url_img" id="technologyImage")
 
-    button(type="submit", class="btn" id="technology-submit-btn")= technology._id ? "Modifier" : "Supprimer"
+    button(type="submit", class="btn" id="technology-submit-btn")= technology._id ? "Modifier" : "Ajouter"
     button(type="button" class="btn close") Fermer

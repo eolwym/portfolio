@@ -38,7 +38,7 @@ block content
 
                 .block(data-sal="slide-right" data-sal-duration="1000" data-sal-delay="500")
                     h2 SOCIAL
-                    a(href="www.linkedin.com/in/cedric-marurai" target="_blank" class="social-container")
+                    a(href="https://www.linkedin.com/in/cedric-marurai" target="_blank" class="social-container")
                         i.fab.fa-linkedin
                         p Cédric Marurai
                     a(href="https://github.com/eolwym" target="_blank" class="social-container")
@@ -69,6 +69,7 @@ block content
             .skills-content
                 section(class="skills-technologies" data-sal="slide-right" data-sal-duration="1000")
                     h3 Technologies
+                    // A améliorer
                     article 
                         h4.text-flashy Technologies préférées
                         img(src=technologies.find(technology => technology.title == "docker").url_img, alt="docker" class="skill-img")
@@ -129,7 +130,7 @@ block content
 
 
 
-    .contact-container
+    .contact-container#contact
         h2 CONTACTEZ - MOI
         form#contact-form(data-sal="flip-right" data-sal-duration="1000")
             input(type='hidden' name='contact_number')

@@ -104,6 +104,8 @@ nav {
     @media (max-width: 1000px) {
       nav #menu-burger {
         display: block; } }
+  nav a {
+    display: block; }
   @media (max-width: 1000px) {
     nav {
       position: fixed;
@@ -111,9 +113,7 @@ nav {
       background: var(--light);
       padding: 0;
       margin: 0;
-      width: 100%; }
-      nav a {
-        display: block; } }
+      width: 100%; } }
   nav ul {
     display: flex; }
     @media (max-width: 1000px) {
