@@ -5,14 +5,8 @@ export const signinForm = (req: Request, res: Response, _:NextFunction) => {
     res.render('auth/auth-form')
 }
 
-export const signin = (req: Request, res: Response, next:NextFunction) => {
-    console.log('signin controller');
-    console.log(req.user);
-    
+export const signin = (req: Request, res: Response, next:NextFunction) => {   
     passport.authenticate('local', (err, user, info) => {     
-      console.log(user);
-      
-      
         if (err) {
           next(err);
         } else if (!user) {
@@ -21,11 +15,7 @@ export const signin = (req: Request, res: Response, next:NextFunction) => {
           req.login(user, (err) => {
             if (err) {
               next(err);
-            } else {
-              console.log('apres le req.login');
-              
-              console.log(req.user);
-              
+            } else {              
               res.redirect('/admin')
             }
           });
