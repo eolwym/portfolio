@@ -10,7 +10,8 @@ body {
   font-family: var(--font-family);
   color: white;
   font-size: 1.6rem;
-  white-space: pre-line; }
+  white-space: pre-line;
+  width: fit-content; }
 
 p {
   margin: 1rem 0; }

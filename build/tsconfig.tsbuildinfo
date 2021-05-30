@@ -552,7 +552,7 @@
         "affectsGlobalScope": false
       },
       "../src/database/models/technology.model.ts": {
-        "version": "18f50d3fff704ef9e7c6412f73c639cf990f1d80601ea47c15b8a34e45edf76e",
+        "version": "de354835ae7f60f3d9a0784fff698befff5c77a50da76be68c21520267b51660",
         "signature": "7c02e9a0598ba5cc6572a30edfe6ecb9eadf272bc458312bbce92dd588045546",
         "affectsGlobalScope": false
       },
@@ -697,7 +697,7 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/public.controller/public.auth.controller.ts": {
-        "version": "5bd0e26f8b3b53afac5b676d26398efa396bbdb306b102dba732069ff79a5fc4",
+        "version": "3dbd47a621729c1fb0302083e21c539a5393ec23fb6902d83b36c21c0d6b18aa",
         "signature": "09510c190da35ca1219e3bb64cb06181a0b707e5c9a15f2653fd535b99f0c68e",
         "affectsGlobalScope": false
       },
@@ -706,20 +706,10 @@
         "signature": "8dc98e62b898fe3e7d42d8456b2f369d196925618ceb218274cf2001218be5a0",
         "affectsGlobalScope": false
       },
-      "../src/database/interfaces/expriences.interface.ts": {
-        "version": "863bd73524931e4750862d0a88d5e860a33aa0b5b8ba570091a3bae9f325e2cb",
-        "signature": "0b348f3c932120089d0fd502853038ce5681799f9b977e8fe6afaae23ef20381",
-        "affectsGlobalScope": false
-      },
       "../src/database/interfaces/request.d.ts": {
         "version": "9737f36158123319e79ff9909832405463f31bb08f5f303403c7a7535f2ed17b",
         "signature": "9737f36158123319e79ff9909832405463f31bb08f5f303403c7a7535f2ed17b",
         "affectsGlobalScope": true
-      },
-      "../src/database/models/experience.model.ts": {
-        "version": "94fdf8f9693c91049bca9dbfbd8ccb2846151bcda43016ff43b7d2bc80139d81",
-        "signature": "7c02e9a0598ba5cc6572a30edfe6ecb9eadf272bc458312bbce92dd588045546",
-        "affectsGlobalScope": false
       },
       "../src/queries/admin/admin.queries.ts": {
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -1481,10 +1471,6 @@
         "../node_modules/@types/mongoose/index.d.ts",
         "../node_modules/mongoose/index.d.ts"
       ],
-      "../src/database/interfaces/expriences.interface.ts": [
-        "../node_modules/@types/mongoose/index.d.ts",
-        "../node_modules/mongoose/index.d.ts"
-      ],
       "../src/database/interfaces/request.d.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
         "../node_modules/mongoose/index.d.ts",
@@ -1499,10 +1485,6 @@
         "../node_modules/mongoose/index.d.ts"
       ],
       "../src/database/models/achievement.model.ts": [
-        "../node_modules/@types/mongoose/index.d.ts",
-        "../node_modules/mongoose/index.d.ts"
-      ],
-      "../src/database/models/experience.model.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
         "../node_modules/mongoose/index.d.ts"
       ],
@@ -2268,9 +2250,6 @@
       "../src/database/models/achievement.model.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
-      "../src/database/models/experience.model.ts": [
-        "../node_modules/mongoose/index.d.ts"
-      ],
       "../src/database/models/technology.model.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
@@ -2430,12 +2409,10 @@
       "../src/controllers/public.controller/public.controller.ts",
       "../src/database/database.ts",
       "../src/database/interfaces/achievement.interface.ts",
-      "../src/database/interfaces/expriences.interface.ts",
       "../src/database/interfaces/request.d.ts",
       "../src/database/interfaces/technology.interface.ts",
       "../src/database/interfaces/user.interface.ts",
       "../src/database/models/achievement.model.ts",
-      "../src/database/models/experience.model.ts",
       "../src/database/models/technology.model.ts",
       "../src/database/models/user.model.ts",
       "../src/env/development.ts",

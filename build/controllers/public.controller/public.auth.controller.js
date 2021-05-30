@@ -10,10 +10,7 @@ const signinForm = (req, res, _) => {
 };
 exports.signinForm = signinForm;
 const signin = (req, res, next) => {
-    console.log('signin controller');
-    console.log(req.user);
     passport_1.default.authenticate('local', (err, user, info) => {
-        console.log(user);
         if (err) {
             next(err);
         }
@@ -26,8 +23,6 @@ const signin = (req, res, next) => {
                     next(err);
                 }
                 else {
-                    console.log('apres le req.login');
-                    console.log(req.user);
                     res.redirect('/admin');
                 }
             });
